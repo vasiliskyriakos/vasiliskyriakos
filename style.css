@@ -42,13 +42,13 @@ body.dark-theme {
 }
 
 
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
-    overflow-x: hidden;  
 }
 
 header {
@@ -82,11 +82,12 @@ header {
     position: fixed;
     top: -20px;
     right: -200px;
+    width: 2000px; /* Reduce the size as needed */
     height: auto;
     z-index: -1; /* Ensure it is below other elements */
     opacity: 0.3; /* Optional: reduce opacity for a softer look */
-    max-width: 100vw; /* Βεβαιώνεται ότι η εικόνα δεν ξεπερνά το πλάτος της οθόνης */
 }
+
 
 /* Define keyframes once */
 @keyframes settings {
@@ -192,6 +193,11 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.sections, .section {
+    overflow: hidden;
+}
+
 
 .section {
     height: 100vh;
@@ -633,6 +639,9 @@ header {
         font-size: 35px;
     }
 
+    .intro-image {
+        margin-left: 100px;
+    }
 
     .responsive-svg {
         height: 100%;
