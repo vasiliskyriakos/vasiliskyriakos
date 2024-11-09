@@ -41,7 +41,7 @@ body.dark-theme {
     --intro-highlight-color: #10aea6;
 }
 
-html, body {
+html {
     overflow-x: hidden;
 }
 
