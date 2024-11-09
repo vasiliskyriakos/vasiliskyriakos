@@ -1,0 +1,137 @@
+.toggle-checkbox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: -5px;
+  right: 100px;
+  height: 32px;
+  width: 80px;
+  border: 3px solid #000264;
+  border-radius: 80px;
+  background-color: rgb(204, 239, 255);
+  transition: background-color 250ms, border-color 250ms; /* Added border-color transition */
+  box-shadow: 0px 10px 20px #e4e7ec84;
+}
+
+/* Change the background and border color when the checkbox is checked */
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #374151;
+  border-color: #e4e7ec; /* New rule to change the border color */
+}
+
+.toggle-button {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 3px solid #000264;
+  background-color: #5dc9ff;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  border: 3px solid #e4e7ec;
+  transform: translate(47px);
+}
+
+.sun-icon {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  color: #000264;
+}
+
+.sun-icon-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transform: translate(50px) rotate(15deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 0;
+  transform: translate(60px);
+}
+
+.moon-icon {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  color: #ffa200;
+}
+
+.moon-icon-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate(60px) rotate(-15deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+  z-index: 1000;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(5px) rotate(15deg);
+}
+
+/* Responsive adjustments using media queries */
+@media (max-width: 500px) {
+  .toggle-slot {
+    height: 24px;
+    width: 60px;
+    right: 70px;
+    top: 2px;
+  }
+
+  .toggle-button {
+    border: 2px solid #000264;
+    height: 12px;
+    width: 12px;
+  }
+
+  .sun-icon,
+  .moon-icon {
+    height: 18px;
+    width: 18px;
+  }
+
+  .sun-icon-wrapper {
+    transform: translate(38px);
+  }
+
+  .moon-icon-wrapper {
+    transform: translate(40px);
+  }
+
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    transform: translate(4px);
+  }
+
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    transform: translate(35px);
+  }
+
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    border: 2px solid #e4e7ec;
+    transform: translate(34px);
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spline Viewer with Glassy Container</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="spline.css">
+    <link rel="stylesheet" href="../styles/back.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+
+</head>
+<body>
+
+    <!-- Spline Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.23/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/KKkTjySXN2rI-Mxg/scene.splinecode"></spline-viewer>
+
+    <!-- Glassy Container with UI Information -->
+    <div class="glass-container">
+
+        <h1 class="title">UI/UX Services</h1>
+
+        <div class="service-icon">
+            <img src="../images/design-1.png" alt="UI/UX Icon">
+        </div>
+
+        <p>Hello! I'm, a creative developer passionate about 3D design and interactive experiences.</p>
+
+        <a href="../index.html" class="button" target="_blank">
+            <div class="button__content">
+                <p>Back Home</p>
+                <div class="button__shape-1"></div>
+                <div class="button__shape-2"></div>
+                <div class="button__shape-3"></div>
+                <div class="button__shape-4"></div>
+                <div class="button__shape-5"></div>
+                <div class="button__shape-6"></div>
+            </div>
+        </a>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const glassContainer = document.querySelector('.glass-container');
+    
+            glassContainer.addEventListener('mousemove', (e) => {
+                const { offsetX, offsetY, currentTarget } = e;
+                const { offsetWidth, offsetHeight } = currentTarget;
+    
+                // Calculate shadow positions to simulate a spotlight effect from the cursor position
+                const xMove = (offsetX - offsetWidth / 2) / 5; // Adjust the divisor to change light spread
+                const yMove = (offsetY - offsetHeight / 2) / 5;
+    
+                // Set the CSS variables for the spotlight effect
+                document.documentElement.style.setProperty('--shadow-x', `${xMove}px`);
+                document.documentElement.style.setProperty('--shadow-y', `${yMove}px`);
+            });
+    
+            // Reset the shadow when the cursor leaves the container
+            glassContainer.addEventListener('mouseleave', () => {
+                document.documentElement.style.setProperty('--shadow-x', '0px');
+                document.documentElement.style.setProperty('--shadow-y', '0px');
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

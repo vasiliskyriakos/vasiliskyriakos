@@ -1,0 +1,125 @@
+/* Initial hidden state and transitions */
+
+/* Default fade and slide up animation */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide left */
+[data-animate-slide-left] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide right */
+[data-animate-slide-right] {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide up */
+[data-animate-slide-up] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide down */
+[data-animate-slide-down] {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Scale in */
+[data-animate-scale] {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Rotate in */
+[data-animate-rotate] {
+    opacity: 0;
+    transform: rotate(-15deg);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Show animation for all states */
+[data-animate].animated,
+[data-animate-slide-left].animated,
+[data-animate-slide-right].animated,
+[data-animate-slide-up].animated,
+[data-animate-slide-down].animated,
+[data-animate-scale].animated,
+[data-animate-rotate].animated {
+    opacity: 1;
+    transform: translateY(0); /* Default slide up for data-animate */
+}
+
+/* Override transforms for specific animations */
+[data-animate-slide-left].animated {
+    transform: translateX(0); /* Slide from left to center */
+}
+
+[data-animate-slide-right].animated {
+    transform: translateX(0); /* Slide from right to center */
+}
+
+[data-animate-slide-up].animated {
+    transform: translateY(0); /* Slide from bottom to center */
+}
+
+[data-animate-slide-down].animated {
+    transform: translateY(0); /* Slide from top to center */
+}
+
+[data-animate-scale].animated {
+    transform: scale(1); /* Scale to normal size */
+}
+
+[data-animate-rotate].animated {
+    transform: rotate(0); /* Rotate to normal orientation */
+}
+
+/* Exit animations (fade out) for each */
+[data-animate].fade-out,
+[data-animate-slide-left].fade-out,
+[data-animate-slide-right].fade-out,
+[data-animate-slide-up].fade-out,
+[data-animate-slide-down].fade-out,
+[data-animate-scale].fade-out,
+[data-animate-rotate].fade-out {
+    opacity: 0;
+    transform: translateY(50px); /* Defaults to fade out by sliding down */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Specific fade-out effects */
+[data-animate-slide-left].fade-out {
+    transform: translateX(-70px); /* Slide out to the left */
+}
+
+[data-animate-slide-right].fade-out {
+    transform: translateX(70px); /* Slide out to the right */
+}
+
+[data-animate-slide-up].fade-out {
+    transform: translateY(70px); /* Slide out downwards */
+}
+
+[data-animate-slide-down].fade-out {
+    transform: translateY(-70px); /* Slide out upwards */
+}
+
+[data-animate-scale].fade-out {
+    transform: scale(0.8); /* Scale down when fading out */
+}
+
+[data-animate-rotate].fade-out {
+    transform: rotate(-15deg); /* Rotate slightly when fading out */
+}

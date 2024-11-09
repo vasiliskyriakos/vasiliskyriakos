@@ -1,0 +1,101 @@
+:root {
+    --background-color: rgb(15, 18, 23);
+    --text-color: #e0e0e0;
+    --header-background: rgb(15, 18, 23);
+    --header-shadow: rgba(0, 0, 0, 0.5);
+    --link-color: #bbbbbb;
+    --link-hover-color: #58a6ff;
+    --highlight-color: #58a6ff;
+    --service-card-bg: linear-gradient(135deg, #21252d97, #080f187f);
+    --service-card-shadow: rgba(0, 0, 0, 0.5);
+    --button-bg: #3b3b3b;
+    --button-text: #fff;
+    --button-hover-bg: #555;
+    --intro-text-color: #e0e0e0;
+    --intro-highlight-color: #58a6ff;
+    --shadow-x: 0px;
+    --shadow-y: 0px;
+    --shadow-blur: 500px; /* Blur effect to create a spotlight look */
+    --shadow-color: rgba(98, 0, 255, 0.2); /* Light color for spotlight */
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+spline-viewer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassy container in the center */
+.glass-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--service-card-bg);
+    border-radius: 20px;
+    min-height: 550px;
+    max-height: 60%;
+    min-width: 400px;
+    max-width: 30%;
+    box-shadow: 0 0 200px 50px rgba(255, 63, 223, 0.3); /* Adjust values for a spread effect */
+    text-align: center;
+    backdrop-filter: blur(12px);
+    transition: box-shadow 0.2s ease;
+    padding: 40px 40px;
+    cursor: pointer;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.service-icon {
+    filter: drop-shadow(0 0 10px rgba(77, 77, 77, 0.622));
+}
+
+.service-icon img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.glass-container p {
+    font-size: 16px;
+    color: var(--link-color);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    overflow-wrap: break-word;
+    color: #fff;
+    padding: 0px 30px;
+    
+}
+
+/* Title styling */
+.title {
+    margin: 0;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
