@@ -194,7 +194,7 @@ header {
     background-repeat: no-repeat;
 }
 
-.sections, .section {
+.sections {
     overflow: hidden;
 }
 
@@ -363,7 +363,6 @@ header {
     justify-content: center;
     flex-direction: row;
     gap: 50px;
-    margin-top: 80px;
     padding-left: 5%;
     padding-right: 5%;
 }
