@@ -621,7 +621,7 @@ header {
     margin: 0 auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .responsive-svg {
         max-width: 100%;
     }
