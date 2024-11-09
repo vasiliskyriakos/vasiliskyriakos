@@ -650,7 +650,7 @@ header {
     }
 
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .section-dots {
@@ -794,7 +794,7 @@ header {
     }
 
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
         font-size: small;
     }
