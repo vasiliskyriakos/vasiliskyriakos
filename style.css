@@ -41,6 +41,9 @@ body.dark-theme {
     --intro-highlight-color: #10aea6;
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -52,7 +55,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 100%; 
     padding: 25px 40px;
     display: flex;
     justify-content: space-between;
