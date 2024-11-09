@@ -52,6 +52,7 @@ body {
     background-color: var(--background-color);
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     overflow-x: hidden;
+    
 }
 
 header {
@@ -621,7 +622,9 @@ header {
     margin: 0 auto;
 }
 
+
 @media (max-width: 600px) {
+
     .responsive-svg {
         height: 100%;
         width: 100%;
@@ -633,12 +636,41 @@ header {
 
     .buttons {
         flex-direction: column;
-
     }
 
     .section-dots {
         opacity:0;
     }
+
+    .service-card {
+        padding: 40px;
+        width: 10%;
+    }
+
+    .service-icon img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .service-card p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .service-card a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .service-cards {
+        margin-top: 50px;
+    }
+    
 }
 
 @media (max-width: 1000px) {
@@ -705,6 +737,7 @@ header {
     }
 }
 
+
 @media (max-width: 1600px) {
     .section {
         padding: 20px 10px;
@@ -758,6 +791,11 @@ header {
     .contact-card {
         width: 90%;
         margin: 10px 0;
+    }
+
+    .services-header p {
+        font-size: 15px;
+        margin-bottom: 30px;
     }
 }
 

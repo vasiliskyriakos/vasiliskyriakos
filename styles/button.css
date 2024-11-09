@@ -155,6 +155,24 @@
     animation: move-shape-6 21.5s ease-in-out infinite alternate;
   }
   
+  @media (max-width: 600px) {
+
+    .btn-primary {
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+
+    .button__content p {
+      padding-top: 15px;
+      font-size: 15px;
+    }
+
+    .button__content {
+      padding: 5px 15px;
+  }
+
+  }
+
   /* Keyframes for extended movement */
   @keyframes move-shape-1 {
     0% {
