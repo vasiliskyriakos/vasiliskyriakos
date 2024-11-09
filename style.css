@@ -51,8 +51,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;    
 }
 
 header {
@@ -624,6 +623,22 @@ header {
 
 
 @media (max-width: 600px) {
+
+    .intro-text p {
+        font-size: 15px;
+    }
+
+    .intro-text h1 {
+        font-size: 35px;
+    }
+    
+    .intro-text .highlighted {
+        font-size: 35px;
+    }
+
+    .intro-image {
+        margin-left: 0px;
+    }
 
     .responsive-svg {
         height: 100%;
