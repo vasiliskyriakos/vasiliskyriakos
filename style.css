@@ -636,9 +636,6 @@ header {
         font-size: 35px;
     }
 
-    .intro-image {
-        margin-left: 0px;
-    }
 
     .responsive-svg {
         height: 100%;
@@ -684,6 +681,12 @@ header {
 
     .service-cards {
         margin-top: 50px;
+    }
+
+    .section-title {
+        font-size: 60px;
+        margin-bottom: 20px;
+        cursor: pointer;
     }
     
 }
