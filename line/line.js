@@ -19,17 +19,17 @@ const observer = new IntersectionObserver((entries) => {
             // Show the image after a delay
             setTimeout(() => {
                 image.classList.add('visible');
-            }, 500); 
+            }, 200); 
 
             // Show the slide-in elements (title and description) after the image appears
             setTimeout(() => {
                 slideElements.forEach(element => element.classList.add('active'));
-            }, 700);
+            }, 100);
 
             // Complete the line animation after the image appears
             setTimeout(() => {
                 line.classList.add('complete');
-            }, 800); 
+            }, 100); 
         } else {
             // Remove classes when elements go out of view (optional)
             line.classList.remove('active', 'complete');
