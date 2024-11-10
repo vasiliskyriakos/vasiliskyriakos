@@ -128,3 +128,17 @@ spline-viewer {
         font-size: 28px;
      }
 }
+
+
+@media (max-width: 500px) {
+
+    .glass-container {
+        min-height: 500px;
+        max-height: 20%;
+        min-width: 300px;
+        max-width: 20%;
+        padding: 20px 30px;
+        box-shadow: 0 0 0px 0px rgba(255, 63, 223, 0.196); /* Adjust values for a spread effect */
+    }
+
+}
