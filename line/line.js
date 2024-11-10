@@ -1,7 +1,7 @@
 // Select all sections to observe
 const sections = document.querySelectorAll('.section');
 const options = {
-    threshold: 0.4 // Trigger when 50% of the section is visible
+    threshold: 0.5 // Trigger when 50% of the section is visible
 };
 
 // Create an Intersection Observer instance

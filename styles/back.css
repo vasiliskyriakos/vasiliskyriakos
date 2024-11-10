@@ -1,8 +1,8 @@
 :root {
     /*========== Colors ==========*/
     --first-color: hsl(0, 100%, 50%);
-    --sixth-color: hsl(48, 100%, 50%);
-    --third-color: hsl(54, 100%, 50%);
+    --sixth-color: hsl(26, 100%, 50%);
+    --third-color: hsl(204, 52%, 54%);
     --fourth-color: hsl(0, 100%, 22%);
     --fifth-color: hsl(314, 100%, 50%);
     --second-color: hsl(296, 100%, 33%);
@@ -29,6 +29,8 @@
     font-weight: 600;
     overflow: hidden;
     margin-top: 20px;
+    border: 4px solid rgb(65, 65, 65); /* Example of a solid red border */
+
   }
 
   .button__content p {
@@ -187,4 +189,20 @@
       transform: translate(30px, -50px) scale(1);
     }
   }
-  
+
+
+  @media (max-width: 600px) {
+
+    .btn-primary {
+      font-size: 0.8rem;
+    }
+
+    .button__content p {
+      font-size: 12px;
+    }
+
+    .button__content {
+      padding: 5px 5px;
+  }
+
+  }

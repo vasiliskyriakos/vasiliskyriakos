@@ -99,3 +99,32 @@ spline-viewer {
     color: #fff;
 }
 
+
+
+@media (max-width: 1000px) {
+
+    .glass-container {
+        min-height: 500px;
+        max-height: 20%;
+        min-width: 300px;
+        max-width: 20%;
+        padding: 20px 30px;
+    }
+
+    .service-icon img {
+        width: 70px;
+        height: 70px;
+        max-width: 100%;
+    }
+    
+    .glass-container p {
+        font-size: 14px;
+        overflow-wrap: break-word;
+        color: #fff;
+        padding: 0px 20px;
+    }
+
+    .glass-container h1 {
+        font-size: 28px;
+     }
+}
