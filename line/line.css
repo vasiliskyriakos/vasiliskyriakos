@@ -91,21 +91,6 @@ header {
     opacity: 0;
 }
 
-@media (max-width: 1600px) {
-    :root {
-        --line-position: 20%;
-    }
-    .content {
-        margin-left: calc(var(--line-position) + 15%);
-        min-width: 150px;
-        padding: 20px;
-        transform: translateY(-32px);
-    }
-}
-
-
-
-
 .content {
     display: flex;
     flex-direction: column;
@@ -219,7 +204,35 @@ h1:hover {
 }
 
 
-@media (max-width: 600px) {
+
+@media (max-width: 1600px) {
+    :root {
+        --line-position: 20%;
+    }
+    .content {
+        margin-left: calc(var(--line-position) + 8%);
+        min-width: 150px;
+        padding: 20px;
+        transform: translateY(-32px);
+    }
+}
+
+
+@media (max-width: 1400px) {
+    :root {
+        --line-position: 20%;
+    }
+    .content {
+        margin-left: calc(var(--line-position) + 10%);
+        min-width: 150px;
+        padding: 20px;
+        transform: translateY(-32px);
+    }
+}
+
+
+
+@media (max-width: 1000px) {
     :root {
         --line-position: 20%;
     }
