@@ -244,7 +244,9 @@ h1:hover {
         line-height: 1.5; /* Adjust this value to increase or decrease line spacing */
     }
 
-    
+    .nav-links li:not(:first-child) {
+        display: none; /* Hide all links except the first one ("Home") */
+    }
 
     /* Image follows line's positioning */
     .image {
