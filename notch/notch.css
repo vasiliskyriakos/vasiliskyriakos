@@ -267,7 +267,7 @@ h1:hover {
         display: flex;
         height: 100vh;
         overflow: hidden;
-        padding-top: 100px;
+        padding-top: 60px;
         align-items: start;
     }
 
@@ -275,7 +275,7 @@ h1:hover {
     .content {
         margin-left: 0;
         padding: 30px;
-        padding-top: 100px;
+        padding-top: 60px;
         width: 100%;
         text-align:left;
         gap: 5px;
