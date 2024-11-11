@@ -748,6 +748,13 @@ header {
         margin-bottom: 20px;
         cursor: pointer;
     }
+
+
+    .clickable-text{
+        font-size: 15px;
+        padding-top: 100px;
+
+    }
     
 }
 
