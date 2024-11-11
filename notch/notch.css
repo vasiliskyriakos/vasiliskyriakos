@@ -287,6 +287,7 @@ h1:hover {
         flex-direction: row;
         align-items: center;
         gap: 15px;
+        padding-bottom: 30px;
     }
 
     button {
@@ -305,7 +306,7 @@ h1:hover {
     }
 
     .description {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     p {
@@ -313,7 +314,6 @@ h1:hover {
         font-weight: 400;
     }
 
-    /* Adjust video container width for smaller screens */
     .video-content {
         width: 100%;
         border-radius: 10px;
