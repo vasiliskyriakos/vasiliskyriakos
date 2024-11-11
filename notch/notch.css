@@ -70,7 +70,7 @@ header {
 
 /* Line with animation and transform-origin adjustment */
 .line {
-    width: 2px;
+    width: 2.5px;
     height: 0; /* Start with height 0 for the animation */
     transform-origin: top; /* Set the origin to the top */
     transition: height 0.2s ease-in-out; /* Adjust the timing of the animation */
@@ -122,7 +122,6 @@ button {
     border-radius: 25px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0px 4px 15px rgba(168, 18, 243, 0.3);
 }
 
 button:hover {
@@ -132,7 +131,6 @@ button:hover {
 
 button:active {
     transform: translateY(0);
-    box-shadow: 0px 4px 10px rgba(168, 18, 243, 0.3);
 }
 
 .video-container {
@@ -309,4 +307,53 @@ h1:hover {
         opacity: 0;
     }
 
+}
+
+
+@media (max-width: 600px) {
+    /* Hide the line and left-side content */
+    .left-side {
+        display: none;
+    }
+
+    /* Center the content for smaller screens */
+    .content {
+        margin-left: 0;
+        padding: 30px;
+        width: 100%;
+        text-align:left;
+        gap: 5px;
+    }
+
+    /* Adjust the button container layout to be vertical */
+    .button-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    button {
+        background: linear-gradient(135deg, #5b00cb, #5b00cb);
+        border: none;
+        padding: 7px 10px;
+        font-size: 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    /* Adjust title and description font sizes for smaller screens */
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    /* Adjust video container width for smaller screens */
+    .video-content {
+        width: 100%;
+        border-radius: 10px;
+    }
 }
