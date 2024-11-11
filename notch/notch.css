@@ -1,5 +1,5 @@
 :root {
-    --line-position: 30%; /* Set the initial position of the line */
+    --line-position: 25%; /* Set the initial position of the line */
 }
 
 body {
@@ -84,9 +84,9 @@ header {
     top: 50%;
     transform: translateY(-50%);
     margin-top: 20px;
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(0 0 30px rgba(135, 49, 255, 0.6));
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 30px rgba(118, 49, 255, 0.6));
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     opacity: 0;
@@ -95,11 +95,54 @@ header {
 .content {
     display: flex;
     flex-direction: column;
-    margin-left: calc(var(--line-position) + 4%);
+    margin-left: calc(var(--line-position) + 6%);
     min-width: 100px;
     max-width: 1000px;
     padding: 20px;
     transform: translateY(-32px);
+    gap: 10px;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+button {
+    background: linear-gradient(135deg, #5b00cb, #5b00cb);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0px 4px 15px rgba(168, 18, 243, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 20px rgba(225, 164, 255, 0.306);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0px 4px 10px rgba(168, 18, 243, 0.3);
+}
+
+.video-container {
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.video-content {
+    width: 80%;
+    border-radius: 30px;
 }
 
 h1 {
@@ -109,29 +152,19 @@ h1 {
     cursor: pointer;
 }
 
+p {
+    font-weight: bold;
+}
+
 h1:hover {
     transform: scale(1.1);
 }
 
 .section1 .line {
-    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgb(255, 0, 191) 30%, rgb(140, 0, 255) 70%, rgba(255, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgb(255, 238, 0) 30%, rgb(140, 0, 255) 70%, rgba(255, 0, 0, 0) 100%);
     filter: drop-shadow(0 20px 5px #dcb9ff99);
 }
 
-.section2 .line {
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 0) 0%, rgb(0, 251, 255) 30%, rgb(25, 0, 255) 70%, rgba(0, 0, 255, 0) 100%);
-    filter: drop-shadow(0 20px 5px #63c1ff);
-}
-
-.section3 .line {
-    background: linear-gradient(to bottom, rgba(0, 255, 0, 0) 0%, rgb(0, 174, 255) 30%, rgb(251, 0, 255) 70%, rgba(0, 255, 0, 0) 100%);
-    filter: drop-shadow(0 20px 5px #b061ffba);
-}
-
-.section4 .line {
-    background: linear-gradient(to bottom, rgba(255, 255, 0, 0) 0%, rgb(255, 233, 65) 30%, rgb(0, 103, 199) 70%, rgba(255, 255, 0, 0) 100%);
-    filter: drop-shadow(0 20px 5px #fff34499);
-}
 
 .line.active {
     height: 50%; /* Set height to half when active */

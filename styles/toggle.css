@@ -16,17 +16,16 @@
   right: 100px;
   height: 32px;
   width: 80px;
-  border: 3px solid #000264;
+  border: 3px solid #e4e7ec;
   border-radius: 80px;
-  background-color: rgb(204, 239, 255);
-  transition: background-color 250ms, border-color 250ms; /* Added border-color transition */
+  background-color: #374151; /* Dark theme background */
+  transition: background-color 250ms, border-color 250ms;
   box-shadow: 0px 10px 20px #e4e7ec84;
 }
 
-/* Change the background and border color when the checkbox is checked */
 .toggle-checkbox:checked ~ .toggle-slot {
-  background-color: #374151;
-  border-color: #e4e7ec; /* New rule to change the border color */
+  background-color: rgb(204, 239, 255); /* Light theme background */
+  border-color: #000264;
 }
 
 .toggle-button {
@@ -35,15 +34,16 @@
   width: 16px;
   margin: 5px;
   border-radius: 50%;
-  border: 3px solid #000264;
-  background-color: #5dc9ff;
+  border: 3px solid #e4e7ec;
+  background-color: #485367; /* Dark button color */
+  transform: translate(47px); /* Start on the right for dark theme */
   transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
 }
 
 .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
-  background-color: #485367;
-  border: 3px solid #e4e7ec;
-  transform: translate(47px);
+  background-color: #5dc9ff; /* Light button color */
+  border: 3px solid #000264;
+  transform: translate(0); /* Move to the left on toggle */
 }
 
 .sun-icon {
@@ -58,15 +58,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  transform: translate(50px) rotate(15deg);
+  opacity: 0; /* Sun icon hidden initially */
+  transform: translate(5px) rotate(15deg); /* Start aligned with left for light theme */
   transform-origin: 50% 50%;
   transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
 }
 
 .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
-  opacity: 0;
-  transform: translate(60px);
+  opacity: 1; /* Sun icon appears on toggle */
+  transform: translate(50px) rotate(15deg);
 }
 
 .moon-icon {
@@ -81,16 +81,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transform: translate(60px) rotate(-15deg);
+  opacity: 1; /* Moon icon visible initially */
+  transform: translate(5px) rotate(15deg); /* Start aligned with left side of circle */
   transform-origin: 50% 50%;
   transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
   z-index: 1000;
 }
 
 .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
-  opacity: 1;
-  transform: translate(5px) rotate(15deg);
+  opacity: 0; /* Moon icon disappears on toggle */
+  transform: translate(60px); /* Move it out of view */
 }
 
 /* Responsive adjustments using media queries */
@@ -115,11 +115,11 @@
   }
 
   .sun-icon-wrapper {
-    transform: translate(38px);
+    transform: translate(4px);
   }
 
   .moon-icon-wrapper {
-    transform: translate(40px);
+    transform: translate(34px);
   }
 
   .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
@@ -132,6 +132,6 @@
 
   .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
     border: 2px solid #e4e7ec;
-    transform: translate(34px);
+    transform: translate(0);
   }
 }

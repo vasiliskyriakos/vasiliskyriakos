@@ -1,5 +1,5 @@
 /* Define light theme colors as default */
-:root {
+body.light-theme {
     --background-color: #fff;
     --text-color: #333;
     --header-background: #fff;
@@ -14,10 +14,14 @@
     --button-hover-bg: #333;
     --intro-text-color: #333;
     --intro-highlight-color: #000080;
+
+    --click-here-color: #ff5100; /* First glow color */
+    --click-here-glow: #ffb489; /* Second glow color */
 }
 
 /* Dark theme overrides */
-body.dark-theme {
+:root
+ {
     --background-color: rgb(15, 18, 23);
     --text-color: #e0e0e0;
     --header-background: rgb(15, 18, 23);
@@ -39,6 +43,9 @@ body.dark-theme {
     --button-hover-bg: #555;
     --intro-text-color: #e0e0e0;
     --intro-highlight-color: #10aea6;
+
+    --click-here-color: #75ffb3; /* First glow color */
+    --click-here-glow: #00ff84; /* Second glow color */
 }
 
 
@@ -624,6 +631,52 @@ header {
     margin: 0 auto;
 }
 
+  /* ==================================================================================================== */
+
+
+.highlighted {
+    color: var(--intro-text-color);
+    font-weight: bold;
+  }
+
+  .clickable-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--intro-text-color);
+    text-decoration: none;
+  }
+
+  .click-here {
+    color: var(--click-here-color);
+    margin-left: 10px;
+    animation: glow 1.5s infinite alternate;
+  }
+
+  .arrow {
+    margin-left: 8px;
+    font-size: 1.5em;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 8px var(--click-here-color), 0 0 16px var(--click-here-color);
+    }
+    to {
+      text-shadow: 0 0 8px var(--click-here-glow), 0 0 16px var(--click-here-glow), 0 0 24px var(--click-here-glow);
+    }
+  }
+
+
+
+  /* ==================================================================================================== */
+
+
 
 @media (max-width: 600px) {
 
@@ -653,6 +706,7 @@ header {
     }
 
     .buttons {
+        gap: 20px;
         flex-direction: row;
     }
 
@@ -702,6 +756,7 @@ header {
         flex-direction: column;
     }
 }
+
 
 @media (max-width: 768px) {
     .intro-content {
@@ -772,9 +827,13 @@ header {
         padding: 20px 10px;
     }
 
+    .clickable-text{
+        padding-top: 100px;
+
+    }
+
     .intro-text h1 {
         font-size: 30px;
-        padding-top: 100px;
     }
 
     .intro-text .highlighted {
@@ -804,7 +863,7 @@ header {
 
     .buttons {
         flex-direction: row;
-        gap: 20px;
+        gap: 25px;
         font-size: small;
     }
 

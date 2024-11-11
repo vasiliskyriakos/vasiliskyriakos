@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Line Animation</title>
+    <link rel="stylesheet" href="notch.css">
+    <link rel="icon" href="../images/binary-code.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <div id="section1" class="section section1">
+
+        <svg class="background-svg" width="934" height="941" viewBox="0 0 934 941" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame 2">
+            <path id="Ellipse3" d="M932 470.5C932 729.26 723.798 939 467 939C210.202 939 2 729.26 2 470.5C2 211.74 210.202 2 467 2C723.798 2 932 211.74 932 470.5Z" stroke="#696969" stroke-width="4"/>
+            <g id="Group1">
+            <path id="Ellipse6" d="M658 470.5C658 576.829 572.472 663 467 663C361.528 663 276 576.829 276 470.5C276 364.171 361.528 278 467 278C572.472 278 658 364.171 658 470.5Z" stroke="#696969" stroke-width="4"/>
+            <path id="Cycle1" d="M670 437.5C670 447.165 662.165 455 652.5 455C642.835 455 635 447.165 635 437.5C635 427.835 642.835 420 652.5 420C662.165 420 670 427.835 670 437.5Z" fill="#696969"/>
+            </g>
+            <g id="Group2">
+            <path id="Ellipse2" d="M757 470.5C757 632.059 627.147 763 467 763C306.853 763 177 632.059 177 470.5C177 308.941 306.853 178 467 178C627.147 178 757 308.941 757 470.5Z" stroke="#696969" stroke-width="4"/>
+            <circle id="Cycle2" cx="732.5" cy="586.5" r="17.5" fill="#696969"/>
+            </g>
+            </g>
+        </svg>
+        
+        <div class="left-side">
+            <div class="line"></div>
+            <img src="../images/dynamic-notch.png" class="image" alt="Icon 1">
+        </div>
+            
+        <div class="content">
+                <h2 class="title slide-in" style="color: #ffea00;">DynamicNotch</h2>
+                <h3 class="description slide-in">A whole new way of using your macOS.</h3>
+                <div class="button-container slide-in">
+                <a href="https://buy.stripe.com/test_3cseY45HYe089SofYY" target="_blank">
+                    <button id="checkout-button" class="btn-primary" > 1.99 $ per month</button>
+                </a>
+                <button class="download-btn">Download</button>
+            </div>  
+            
+            <div class="video-container slide-in">
+                <video src="../demo-videos/notch-video.mov" class="video-content" autoplay loop muted playsinline></video>
+            </div>
+            
+            <p class="os-requirement">Minimum OS requirement: macOS 14.4</p>
+
+        </div>
+
+    </div>
+
+<script src="notch.js"></script>
+</body>
+</html>

@@ -71,5 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // JavaScript to toggle light and dark themes
 
 document.getElementById('theme-toggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
 });
