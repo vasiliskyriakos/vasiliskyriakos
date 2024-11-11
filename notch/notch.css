@@ -12,40 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(15, 18, 23, 0.7);
-    z-index: 1000;
-    padding: 5px 20px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-links li a {
-    color: #c9d1d9;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #8c63ff;
-}
 
 .section {
     display: flex;
@@ -86,7 +52,6 @@ header {
     margin-top: 20px;
     width: 100px;
     height: 100px;
-    filter: drop-shadow(0 0 30px rgba(118, 49, 255, 0.6));
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     opacity: 0;
@@ -151,7 +116,7 @@ h1 {
 }
 
 p {
-    font-weight: bold;
+    font-weight: 300;
 }
 
 h1:hover {
@@ -263,92 +228,89 @@ h1:hover {
 }
 
 
-
-@media (max-width: 1000px) {
-    :root {
-        --line-position: 20%;
-    }
-
-    .content {
-        margin-left: calc(var(--line-position) + 8%);
-        min-width: 150px;
-        padding: 20px;
-        transform: translateY(-32px);
-    }
-
-
-    .title {
-        font-size: 22px;
-        margin: 10px 0;
-    }
-
-    .description {
-        font-size: 14px;
-        color: #ffffff;
-        margin: 0;
-        line-height: 1.5; /* Adjust this value to increase or decrease line spacing */
-    }
-
-    .nav-links li:not(:first-child) {
-        display: none; /* Hide all links except the first one ("Home") */
-    }
-
-    /* Image follows line's positioning */
-    .image {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: 20px;
-        width: 50px;
-        height: 50px;
-        filter: drop-shadow(0 0 30px rgba(135, 49, 255, 0.6));
-        cursor: pointer;
-        transition: transform 0.2s ease-in-out;
-        opacity: 0;
-    }
-
+.shadow {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -100px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%; /* Makes the shadow more circular and natural */
+    box-shadow: 0 0 150px 150px rgba(255, 255, 63, 0.203); /* Adjust values for a spread effect */
+    background-color: rgba(63, 255, 226, 0.1); /* Optional: can be added to enhance the glow effect */
+    pointer-events: none; /* Ensures the shadow doesn’t interfere with clicks */
 }
 
 
-@media (max-width: 600px) {
+.shadow-pink {
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    right: 100px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%; /* Makes the shadow more circular and natural */
+    box-shadow: 0 0 150px 150px rgba(194, 63, 255, 0.212); /* Adjust values for a spread effect */
+    background-color: rgba(63, 255, 226, 0.1); /* Optional: can be added to enhance the glow effect */
+    pointer-events: none; /* Ensures the shadow doesn’t interfere with clicks */
+}
+
+
+@media (max-width: 800px) {
     /* Hide the line and left-side content */
     .left-side {
         display: none;
+    }
+
+
+    .section {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        padding-top: 100px;
+        align-items: start;
     }
 
     /* Center the content for smaller screens */
     .content {
         margin-left: 0;
         padding: 30px;
+        padding-top: 100px;
         width: 100%;
         text-align:left;
         gap: 5px;
     }
 
+
     /* Adjust the button container layout to be vertical */
     .button-container {
         flex-direction: row;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     button {
         background: linear-gradient(135deg, #5b00cb, #5b00cb);
         border: none;
-        padding: 7px 10px;
+        padding: 10px 10px;
         font-size: 12px;
-        border-radius: 10px;
+        border-radius: 50px;
         cursor: pointer;
         transition: transform 0.2s, box-shadow 0.3s;
     }
 
     /* Adjust title and description font sizes for smaller screens */
     .title {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .description {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
     }
 
     /* Adjust video container width for smaller screens */
