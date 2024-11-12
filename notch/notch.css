@@ -9,7 +9,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 100;
     font-style: normal;    
-    overflow: auto;
+    overflow: hidden;
 }
 
 
@@ -19,6 +19,7 @@ body {
     position: relative;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
     padding-top: 60px;
 }
 
@@ -328,10 +329,10 @@ h1:hover {
     }
 
     .video-container2 {
-        display:flex;
+        display:block;
         visibility: visible;
         border-radius: 30px;
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 }
