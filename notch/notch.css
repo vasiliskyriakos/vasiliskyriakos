@@ -9,7 +9,7 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 100;
     font-style: normal;    
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -274,7 +274,7 @@ h1:hover {
     .section {
         display: flex;
         height: 100vh;
-        overflow: hidden;
+        overflow: auto;
         padding-top: 60px;
         align-items: start;
     }
