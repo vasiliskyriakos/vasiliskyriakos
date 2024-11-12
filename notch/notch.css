@@ -310,6 +310,7 @@ h1:hover {
 
     /* Adjust title and description font sizes for smaller screens */
     .title {
+        margin-top: 20px;
         font-size: 28px;
     }
 
@@ -332,5 +333,6 @@ h1:hover {
         visibility: visible;
         border-radius: 30px;
         margin-top: 20px;
+        margin-bottom: 30px;
     }
 }
