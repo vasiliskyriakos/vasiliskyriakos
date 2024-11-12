@@ -108,6 +108,14 @@ button:active {
     border-radius: 30px;
 }
 
+
+.video-container2 {
+    display: none;
+    visibility: hidden;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
 h1 {
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 0.3s ease;
@@ -317,5 +325,12 @@ h1:hover {
     .video-content {
         width: 100%;
         border-radius: 10px;
+    }
+
+    .video-container2 {
+        display:block;
+        visibility: visible;
+        border-radius: 30px;
+        margin-top: 20px;
     }
 }
